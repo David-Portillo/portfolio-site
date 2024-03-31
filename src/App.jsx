@@ -3,11 +3,12 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function App() {
   return (
-    <Parallax pages={1} style={{ top: "0", left: "0" }}>
-      <ParallaxLayer offset={0} speed={2.5}>
-        <p>Parallax</p>
-      </ParallaxLayer>
-    </Parallax>
+    <div style={{ width: '100%', height: '100%', background: '#000' }}>
+      <Parallax pages={3}>
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+      </Parallax>
+    </div>
   );
 }
 
