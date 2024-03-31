@@ -4,6 +4,8 @@
   "description": "portfolio application version 3 using parallax",
   "main": "src/index.js",
   "scripts": {
+    "start": "serve -s dist",
+    "prebuild": "rimraf dist",
     "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "npx cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
@@ -26,6 +28,7 @@
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5"
   }
 }
