@@ -5,7 +5,7 @@ const App: Component = () => {
   return (
     <>
       <Header />
-      <div>HELLO</div>
+      <div class='title-section'>Skills</div>
     </>
   );
 };
