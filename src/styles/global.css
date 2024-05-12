@@ -2,40 +2,45 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* variables */
 
 :root {
   --white-color: white;
+  --black-color: black;
   --coral-color: #f09678;
-  --title-font-size: 30px;
+  --larger-font-size: 1.1rem;
+  --title-font-size: 1.7rem;
   --oswald-font-family: "Oswald", sans-serif;
   --lobster-font-family: "Lobster", sans-serif;
+  --karla-font-family: "Karla", sans-serif;
   --primary-text-shadow: 2px 2px 0px black;
 }
 
 * {
-  font-family: var(--oswald-font-family);
+  font-family: var(--karla-font-family);
   font-optical-sizing: auto;
   font-style: normal;
-  color: var(--white-color);
-  font-weight: 100;
+  color: var(--black-color);
+  font-weight: 300;
 }
 
 /* placeholder */
 body {
-  background-image: url("https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-background-dark-original.svg"); /* Replace 'image-url.jpg' with the actual URL of your image */
+  background-image: url("https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-live-background-1.svg"); /* Replace 'image-url.jpg' with the actual URL of your image */
   background-size: cover; /* This will make sure the image covers the entire body without repeating */
   background-position: center; /* This centers the background image in the body */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  margin: 0; /* Removes the default margin of the body */
-  height: 100vh; /* Sets the minimum height of the body to be 100% of the viewport height */
-  width: 100vw; /* Sets the width of the body to be 100% of the viewport width */
+  line-height: 1.5;
+  min-height: 100vh; /*Sets the minimum height of the body to be 100% of the viewport height */
+  overflow-x: hidden;
 }
 
 .title-section {
-  font-family: var(--lobster-font-family);
-  color: var(--coral-color);
+  font-family: var(--karla-font-family);
+  color: var(--black-color);
   font-size: var(--title-font-size);
-  text-shadow: var(--primary-text-shadow);
+  /* text-shadow: var(--primary-text-shadow); */
+  font-weight: 400;
 }
