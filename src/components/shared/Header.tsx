@@ -1,19 +1,56 @@
 import type { Component } from "solid-js";
-import styles from '../../styles/modules/header.module.css'
+import styles from "../../styles/modules/header.module.css";
 
 const Header: Component = () => {
+  const handleNavToggle = (e: MouseEvent): void => {
+    const navToggle = document.getElementById("mobile-nav-toggle");
+    const primaryNav = document.getElementById("primary-navigation");
+    let visibility = primaryNav?.getAttribute("data-visible");
 
-  return <header class={styles["header"]}>
-    <div><img class={styles.logo} src="https://placehold.co/75x75" alt="logo" /></div>
-    <nav>
-      <ul class={styles["primary-navigation"]}>
-        <li><a href=""><span aria-hidden="true">01</span>ABOUT ME</a></li>
-        <li><a href=""><span aria-hidden="true">02</span>SKILLS</a></li>
-        <li><a href=""><span aria-hidden="true">03</span>HISTORY</a></li>
-        <li><a href=""><span aria-hidden="true">04</span>PROJECTS</a></li>
-      </ul>
-    </nav>
-  </header>
-}
+    visibility = visibility === "false" ? "true" : "false";
+    primaryNav?.setAttribute("data-visible", visibility);
+    navToggle?.setAttribute('aria-expanded', visibility);
+  };
+
+  return (
+    <header class={styles["header"]}>
+      <div>
+        <img class={styles["logo"]} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-logo-1.svg' alt='logo' />
+      </div>
+      <button
+        id="mobile-nav-toggle"
+        class={styles["mobile-nav-toggle"]}
+        aria-controls='primary-navigation'
+        aria-expanded='false'
+        onClick={handleNavToggle}>
+        <span class={styles["sr-only"]}></span>
+      </button>
+      <nav>
+        <ul data-visible='false' id='primary-navigation' class={styles["primary-navigation"]}>
+          <li>
+            <a href=''>
+              <span aria-hidden='true'>01</span>bio
+            </a>
+          </li>
+          <li>
+            <a href=''>
+              <span aria-hidden='true'>02</span>skills
+            </a>
+          </li>
+          <li>
+            <a href=''>
+              <span aria-hidden='true'>03</span>projects
+            </a>
+          </li>
+          <li>
+            <a href=''>
+              <span aria-hidden='true'>04</span>contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;
