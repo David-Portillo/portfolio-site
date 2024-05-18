@@ -5,36 +5,38 @@
 }
 
 .logo {
-  margin: 1em;
   background: hsl(189deg 35% 40% / 15%);
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.5s;
 }
 
-.logo:hover {
-  animation: bell-rock 0.5s ease-in-out forwards;
+.logo-container {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  overflow: hidden;
 }
 
-@keyframes bell-rock {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.logo-container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: clip-path 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+.svg-1 {
+  z-index: 1;
+}
+
+.svg-2 {
+  z-index: 2;
+  opacity: 0;
+}
+
+.logo-container:hover .svg-2 {
+  opacity: 1;
+}
 
 .mobile-nav-toggle {
   display: none;
@@ -46,10 +48,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl(189deg 35% 40% / 15%);
-  backdrop-filter: blur(2px);
+  background: linear-gradient(to right, #24c9d9, #50afdc);
   text-wrap: nowrap;
   font-size: var(--larger-font-size);
+}
+
+.primary-navigation li:hover {
+  animation: bell-rock-links 0.5s ease-in-out forwards;
 }
 
 .primary-navigation a {
@@ -83,6 +88,7 @@
     padding: min(30vh, 10rem) 2em;
     transform: translateX(100%);
     transition: transform 350ms ease-out;
+    box-shadow: 9px 0px 10px 5px;
   }
 
   .mobile-nav-toggle {
@@ -101,5 +107,23 @@
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/PhXBold-black.svg");
+  }
+}
+
+@keyframes bell-rock-links {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

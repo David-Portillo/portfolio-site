@@ -14,8 +14,9 @@ const Header: Component = () => {
 
   return (
     <header class={styles["header"]}>
-      <div>
-        <img class={styles["logo"]} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-logo-1.svg' alt='logo' />
+      <div class={styles["logo-container"]}>
+        <img class={`${styles["logo"]} ${styles["svg-1"]}`} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-logo-1.svg' alt='logo' />
+        <img class={`${styles["logo"]} ${styles["svg-2"]}`} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/david-portfolio.svg' alt='logo' />
       </div>
       <button
         id="mobile-nav-toggle"
