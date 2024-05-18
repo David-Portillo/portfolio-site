@@ -1,8 +1,8 @@
 /* fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
 /* variables */
 
@@ -24,6 +24,8 @@
   font-style: normal;
   color: var(--black-color);
   font-weight: 300;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 /* placeholder */
@@ -37,10 +39,59 @@ body {
   overflow-x: hidden;
 }
 
-.title-section {
+.jumbotron {
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron img {
+  max-width: 95vw;
+}
+
+.title {
   font-family: var(--karla-font-family);
   color: var(--black-color);
   font-size: var(--title-font-size);
-  /* text-shadow: var(--primary-text-shadow); */
   font-weight: 400;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.logo {
+  margin: 1em;
+  background: hsl(189deg 35% 40% / 15%);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px; /* Adjust to your SVG's width */
+  height: 200px; /* Adjust to your SVG's height */
+  overflow: hidden;
+  user-select: none;
+}
+
+.logo-container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: clip-path 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(to right, #24cad9ba, #50b0dcaa);
+}
+::-webkit-scrollbar-thumb {
+  background: #1bb0cecb;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #128197cb;
 }
