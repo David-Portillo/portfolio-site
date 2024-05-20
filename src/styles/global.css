@@ -24,11 +24,8 @@
   font-style: normal;
   color: var(--black-color);
   font-weight: 300;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
-/* placeholder */
 body {
   background-image: url("https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-live-background-1.svg"); /* Replace 'image-url.jpg' with the actual URL of your image */
   background-size: cover; /* This will make sure the image covers the entire body without repeating */
@@ -57,29 +54,6 @@ body {
 
 .description {
   font-size: 18px;
-}
-
-.logo {
-  margin: 1em;
-  background: hsl(189deg 35% 40% / 15%);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.5s;
-}
-
-.logo-container {
-  position: relative;
-  width: 200px; /* Adjust to your SVG's width */
-  height: 200px; /* Adjust to your SVG's height */
-  overflow: hidden;
-  user-select: none;
-}
-
-.logo-container .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: clip-path 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar {

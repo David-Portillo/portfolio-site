@@ -16,6 +16,7 @@
   width: 76px;
   height: 76px;
   overflow: hidden;
+  user-select: none;
 }
 
 .logo-container .logo {
@@ -89,6 +90,8 @@
     transform: translateX(100%);
     transition: transform 350ms ease-out;
     box-shadow: 9px 0px 10px 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .mobile-nav-toggle {

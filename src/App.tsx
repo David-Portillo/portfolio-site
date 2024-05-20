@@ -1,16 +1,31 @@
 import type { Component } from "solid-js";
 import Header from "./components/shared/Header";
+import { createSignal } from "solid-js";
+
 
 const App: Component = () => {
+
+  const [imageSrc, setImageSrc] = createSignal(null);
+
+  const handleDragStart = (e) => {
+    const imgSrc = e.target.src;
+    console.log('image: ', imgSrc);
+    e.dataTransfer.setData("text/plain", imgSrc);
+  }
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const imgSrc = e.dataTransfer.getData("text/plain");
+    console.log('source: ', imgSrc);
+    if (imgSrc) {
+      setImageSrc(imgSrc);
+    }
+  };
   return (
     <>
       <Header />
-      <div class="jumbotron">
-        <img
-          
-          src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-jumbotron-1.svg'
-          alt=''
-        />
+      <div class='jumbotron'>
+        <img draggable="true" onDragStart={handleDragStart} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-jumbotron-1.svg' alt='' />
       </div>
       <section>
         <span class='title'>Bio</span>
@@ -37,6 +52,30 @@ const App: Component = () => {
       </section>
       <div class='title'>Projects</div>
       <div class='title'>Contact</div>
+
+      <div
+        style={{
+          background: "red",
+          width: "100px",
+          height: "100px",
+        }}
+        onDragOver={(e) => {
+          e.preventDefault();
+          if(e.dataTransfer) {
+            e.dataTransfer.dropEffect = "copy"; // Show the copy icon when dragging
+          }
+        }}
+        onDrop={handleDrop}>
+          {imageSrc() ? (
+          <img
+            src={imageSrc()}
+            alt="Dropped"
+            style={{ "max-width": "100%", "max-height": "100%" }}
+          />
+        ) : (
+          <span>Drag and drop an image here</span>
+        )}
+        </div>
     </>
   );
 };

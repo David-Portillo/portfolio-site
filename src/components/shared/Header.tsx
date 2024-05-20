@@ -1,5 +1,4 @@
 import type { Component } from "solid-js";
-import styles from "../../styles/modules/header.module.css";
 
 const Header: Component = () => {
   const handleNavToggle = (e: MouseEvent): void => {
@@ -13,21 +12,21 @@ const Header: Component = () => {
   };
 
   return (
-    <header class={styles["header"]}>
-      <div class={styles["logo-container"]}>
-        <img class={`${styles["logo"]} ${styles["svg-1"]}`} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-logo-1.svg' alt='logo' />
-        <img class={`${styles["logo"]} ${styles["svg-2"]}`} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/david-portfolio.svg' alt='logo' />
+    <header class="header">
+      <div class="logo-container">
+        <img class="logo svg-1" src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-logo-1.svg' alt='logo' />
+        <img class="logo svg-2" src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/david-portfolio.svg' alt='logo' />
       </div>
       <button
         id="mobile-nav-toggle"
-        class={styles["mobile-nav-toggle"]}
+        class="mobile-nav-toggle"
         aria-controls='primary-navigation'
         aria-expanded='false'
         onClick={handleNavToggle}>
-        <span class={styles["sr-only"]}></span>
+        <span></span>
       </button>
       <nav>
-        <ul data-visible='false' id='primary-navigation' class={styles["primary-navigation"]}>
+        <ul data-visible='false' id='primary-navigation' class="primary-navigation">
           <li>
             <a href=''>
               <span aria-hidden='true'>01</span>bio
