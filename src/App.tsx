@@ -27,6 +27,29 @@ const App: Component = () => {
       <div class='jumbotron'>
         <img draggable="true" onDragStart={handleDragStart} src='https://sapulse.blob.core.windows.net/pulse-bc/apps/porfolio/portfolio-jumbotron-1.svg' alt='' />
       </div>
+      <div
+        style={{
+          background: "red",
+          width: "100px",
+          height: "100px",
+        }}
+        onDragOver={(e) => {
+          e.preventDefault();
+          if(e.dataTransfer) {
+            e.dataTransfer.dropEffect = "copy"; // Show the copy icon when dragging
+          }
+        }}
+        onDrop={handleDrop}>
+          {imageSrc() ? (
+          <img
+            src={imageSrc()}
+            alt="Dropped"
+            style={{ "max-width": "100%", "max-height": "100%" }}
+          />
+        ) : (
+          <span>Drag and drop an image here</span>
+        )}
+        </div>
       <section>
         <span class='title'>Bio</span>
         <p class='description'>
@@ -53,29 +76,7 @@ const App: Component = () => {
       <div class='title'>Projects</div>
       <div class='title'>Contact</div>
 
-      <div
-        style={{
-          background: "red",
-          width: "100px",
-          height: "100px",
-        }}
-        onDragOver={(e) => {
-          e.preventDefault();
-          if(e.dataTransfer) {
-            e.dataTransfer.dropEffect = "copy"; // Show the copy icon when dragging
-          }
-        }}
-        onDrop={handleDrop}>
-          {imageSrc() ? (
-          <img
-            src={imageSrc()}
-            alt="Dropped"
-            style={{ "max-width": "100%", "max-height": "100%" }}
-          />
-        ) : (
-          <span>Drag and drop an image here</span>
-        )}
-        </div>
+      
     </>
   );
 };
