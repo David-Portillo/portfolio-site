@@ -1,7 +1,16 @@
-@import './sidebar';
+@import "./reset.scss";
+
+@import "./colors";
+@import "./fonts";
+@import "./typography";
+
+@import "./structure";
+
+@import "./sidebar.scss";
 
 @import "./home.scss";
 @import "./about.scss";
+@import "./resume.scss";
 @import "./work.scss";
 @import "./testimonial.scss";
 @import "./contact.scss";
