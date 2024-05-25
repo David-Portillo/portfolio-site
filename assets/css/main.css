@@ -25,6 +25,12 @@ body {
 main {
   padding-left: 102px;
 }
+main > section {
+  display: none;
+}
+main > section.active {
+  display: block;
+}
 
 #sidebar {
   position: fixed;
@@ -33,6 +39,17 @@ main {
   padding-left: 39px;
   display: flex;
   flex-direction: column;
+}
+#sidebar .toggle-sidebar {
+  position: absolute;
+  font-size: 30px;
+  width: 45px;
+  height: 45px;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  right: -45px;
 }
 #sidebar .logo {
   height: 20%;
@@ -54,6 +71,9 @@ main {
   position: relative;
   margin-bottom: 35px;
 }
+#sidebar nav ul li a {
+  position: relative;
+}
 #sidebar nav ul li a:hover i {
   color: #fff;
 }
@@ -61,11 +81,35 @@ main {
   opacity: 1;
   left: 30px;
 }
+#sidebar nav ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #658DF2;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+}
+#sidebar nav ul li a.active:before {
+  opacity: 0.15;
+  transform: translate(-50%, -50%) scale(1);
+}
+#sidebar nav ul li a.active i {
+  color: #658DF2;
+}
+#sidebar nav ul li a span {
+  display: none;
+}
 #sidebar nav ul li a i {
   font-size: 18px;
   color: #B6B7BA;
+  transition: all 0.3s;
 }
-#sidebar nav ul li span {
+#sidebar nav ul li > span {
   position: absolute;
   top: -7.5px;
   left: 20px;
@@ -119,4 +163,38 @@ main {
 
 #contact {
   background: black;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    background: black;
+    padding-right: 60px;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+  #sidebar.open {
+    transform: translateX(0);
+  }
+  #sidebar .toggle-sidebar {
+    display: flex;
+  }
+  #sidebar .logo {
+    text-align: left;
+  }
+  #sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  #sidebar nav ul li a span {
+    display: block;
+    padding-left: 8px;
+  }
+  #sidebar nav ul li > span {
+    display: none;
+  }
+  main {
+    padding-left: 0;
+    padding-top: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */
