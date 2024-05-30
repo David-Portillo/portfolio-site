@@ -17,3 +17,11 @@ document
   .addEventListener("click", function () {
     document.querySelector("#sidebar").classList.toggle("open");
   });
+
+
+new Typed('.field h2', {
+    strings: ['Front-End web developer', 'Back-End developer'],
+    typeSpeed: 70,
+    backSpeed: 10,
+    loop: true
+  });

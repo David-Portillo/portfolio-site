@@ -16,9 +16,20 @@
       }
     }
 
-    h2 {
-      color: $gray;
+    .field {
+      display: flex;
+      align-items: center;
       margin-bottom: 16px;
+
+      h2 {
+        color: $gray;
+        margin: 0;
+      }
+
+      span {
+        font-size: 21px;
+        margin-left: 2px;
+      }
     }
 
     p {
@@ -28,7 +39,7 @@
 
     .socials {
       margin-top: 191px;
-      
+
       ul {
         display: flex;
         list-style: none;
@@ -44,7 +55,6 @@
             padding: 9px 11px;
             align-items: center;
             transition: all 0.3s;
-           
 
             i {
               font-size: 18px;
@@ -66,7 +76,6 @@
               i {
                 color: #fff;
               }
-
             }
           }
         }
@@ -87,6 +96,5 @@
         filter: saturate(200%) sepia(1);
       }
     }
-  
   }
 }
