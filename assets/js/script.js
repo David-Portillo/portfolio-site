@@ -18,10 +18,15 @@ document
     document.querySelector("#sidebar").classList.toggle("open");
   });
 
+new Typed(".field h2", {
+  strings: ["Front-End web developer", "Back-End developer"],
+  typeSpeed: 70,
+  backSpeed: 10,
+  loop: true,
+});
 
-new Typed('.field h2', {
-    strings: ['Front-End web developer', 'Back-End developer'],
-    typeSpeed: 70,
-    backSpeed: 10,
-    loop: true
-  });
+for (let i = 1; i <= 15; i++) {
+  let meteor = document.createElement("span");
+  meteor.classList = "meteor";
+  document.querySelector("#home .meteor-shower").append(meteor);
+}
