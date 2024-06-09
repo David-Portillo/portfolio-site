@@ -25,14 +25,14 @@
       <nav>
         <ul>
           <li>
-            <a href="#home" class="active">
+            <a href="#home">
               <i class="las la-home"></i>
               <span>Home</span>
             </a>
             <span>Home</span>
           </li>
           <li>
-            <a href="#about">
+            <a href="#about" class="active">
               <i class="las la-address-card"></i>
               <span>About Me</span>
             </a>
@@ -76,60 +76,127 @@
     </div>
 
     <main>
-      <section id="home" class="active">
+      <section id="home">
         <div class="meteor-shower"></div>
         <div class="container">
           <div class="row">
             <div class="col-lg-6 info">
-              <img class="person-circle" src="assets/images/person-circle.png" alt="person circle" />
+              <img
+                class="person-circle"
+                src="assets/images/person-circle.png"
+                alt="person circle"
+              />
               <h1><span>I'm</span> David,</h1>
               <div class="field">
                 <h2></h2>
               </div>
-              
+
               <p>
                 I design and develop services for customers of all sizes,
                 specializing in creating stylish, modern websites, web services
                 and online stores.
               </p>
-              <a class="btn-custom-blue" href="assets/files/cv.pdf" download>Download CV</a>
-            <div class="socials">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="lab la-linkedin-in"></i>
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="lab la-facebook-f"></i>
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="lab la-github"></i>
-                    <span>Github</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="lab la-stack-overflow"></i>
-                    <span>Stack Overflow</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <a class="btn-custom-blue" href="assets/files/cv.pdf" download
+                >Download CV</a
+              >
+              <div class="socials">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="lab la-linkedin-in"></i>
+                      <span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="lab la-facebook-f"></i>
+                      <span>Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="lab la-github"></i>
+                      <span>Github</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="lab la-stack-overflow"></i>
+                      <span>Stack Overflow</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div class="col-lg-6 image">
-              <img src="assets/images/person-home.png" alt="person home">
+              <img src="assets/images/person-home.png" alt="person home" />
             </div>
           </div>
         </div>
       </section>
-      <section id="about">About</section>
+      <section id="about" class="active">
+        <div class="container">
+          <div class="row hero">
+            <div class="col-xxl-6 col-lg-4 image">
+              <img src="assets/images/person-about.png" alt="person about" />
+            </div>
+            <div class="col-xxl-6 col-lg-8 info">
+              <header class="has-bg">
+                <img src="assets/images/h1-bg.png" alt="h1 bg" />
+                <h1>About Me</h1>
+              </header>
+              <h2>Front-End web developer</h2>
+              <p>
+                I'm a web developer with +5 years experience. I work on projects
+                as a Front-End and Back-End developer, as a Front-End developer,
+                I'm Fluent in HTML, CSS, Bootstrap, SCSS, Javascript, Query,
+                Vue.js, and as a Back-End developer, I'm Fluent in PHP,
+                WordPress, and Laravel. <br />This is my motto: "Everyone can
+                start, but only a few can finish"
+              </p>
+              <div class="items">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 ps-0">
+                      <div class="item">
+                        <span class="title">Name:</span>
+                        <span class="value">David</span>
+                      </div>
+                      <div class="item">
+                        <span class="title">Age:</span>
+                        <span class="value">32</span>
+                      </div>
+                      <div class="item">
+                        <span class="title">Location:</span>
+                        <span class="value">Canada</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 ps-0">
+                      <div class="item">
+                        <span class="title">Years of experience:</span>
+                        <span class="value">+5 years</span>
+                      </div>
+                      <div class="item">
+                        <span class="title">Phone:</span>
+                        <span class="value">+1 290 098 2342</span>
+                      </div>
+                      <div class="item">
+                        <span class="title">E-mail:</span>
+                        <span class="value">david.portillo92@gmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="assets/files/cv.pdf" class="btn-custom-blue" download>Download CV</a>
+                <a href="#contact" class="btn-custom-dark">Message me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="resume">Resume</section>
       <section id="work">Work</section>
       <section id="testimonial">Testimonial</section>
