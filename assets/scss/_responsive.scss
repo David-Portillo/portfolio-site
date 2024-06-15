@@ -4,7 +4,20 @@
   }
 }
 
+@media (max-width: 1199px) {
+  #about {
+    .language-skills .language-key-skills {
+      padding-right: 12px;
+    }
+  }
+}
+
 @media (max-width: 991px) {
+  #about {
+    .languages-skills .languages-key-skills {
+      padding-right: 12px;
+    }
+  }
 
   #home {
     .image {
@@ -99,7 +112,7 @@
 
       a {
         width: 100%;
-        text-align:  center;
+        text-align: center;
 
         &:first-child {
           margin-bottom: 16px;
@@ -107,4 +120,13 @@
       }
     }
   }
+}
+
+@media (max-width: 576px) {
+  #about {
+    .rate span {
+      width: 10px;
+    }
+
+  } 
 }
