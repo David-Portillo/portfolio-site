@@ -10,6 +10,18 @@
       padding-right: 12px;
     }
   }
+
+  #resume {
+    .experience {
+      margin-top: 100px;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+    .education {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -116,6 +128,33 @@
 
         &:first-child {
           margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  #resume {
+    .items {
+      .item {
+        position: relative;
+        .icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left:-23px;
+          z-index: 2;
+          margin-top: 0;
+          background: rbga($secondary, 0.75);
+
+          &:before {
+            display: none;
+          }
+        }
+
+        .box {
+          &:before {
+            display: none;
+          }
         }
       }
     }
