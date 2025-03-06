@@ -44,6 +44,11 @@
       }
     }
   }
+
+  .modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button {
+      right: 10px;
+      top: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -156,6 +161,23 @@
             display: none;
           }
         }
+      }
+    }
+  }
+
+  .modal#workModal  {
+    .modal-dialog .modal-content .modal-body {
+      img {
+        height: unset;
+      }
+      
+      .left {
+        padding-right: 0;
+      }
+
+      .right {
+        padding-left: 0;
+        padding-top: 32px;
       }
     }
   }
